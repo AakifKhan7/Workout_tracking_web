@@ -1,0 +1,19 @@
+{% include 'header.html' %}
+<div class="container mt-5">
+    <h1 class="text-center">All Workouts</h1>
+    <div class="row">
+        {% for workout in all_workouts %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ workout.exercise_name }}</h5>
+                        <p class="card-text"><strong>Date:</strong> {{ workout.date }}</p>
+                        <p class="card-text"><strong>Duration:</strong> {{ workout.duration_min }} min</p>
+                        <p class="card-text"><strong>Calories:</strong> {{ workout.calories }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% include 'footer.html' %}

@@ -1,0 +1,13 @@
+{% include 'header.html' %}
+<div class="container mt-5">
+    <h1 class="text-center">Add Workout</h1>
+    <form method="POST" class="w-50 mx-auto">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.exercise.label(class="form-label") }}
+            {{ form.exercise(class="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Add Workout</button>
+    </form>
+</div>
+{% include 'footer.html' %}
